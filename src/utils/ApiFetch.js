@@ -2,8 +2,7 @@ import { saveAs } from 'file-saver';
 
 class ApiFetch{
     constructor(){
-        this.urlBase = "http://localhost:8000";
-        //this.urlBase = "https://legal-crew-api-cbeydedaffe8cmge.eastus-01.azurewebsites.net"
+        this.urlBase = process.env.REACT_APP_API_URL || "http://localhost:8000";
     }
 
     async login(username, password){
